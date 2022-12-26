@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Poppins:wght@300&family=Silkscreen:wght@400;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+:root{
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(255, 255, 255);
+}
+
+body{
+    background-image: url(./images/Bubble-Background.svg);
+}
+
+html{
+    font-size: 75.5%;
+}
+
+h1{
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 10vh;
+    
+}
+
+h6{
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 8vh;
+    font-family: 'Bodoni Moda', serif;
+}
+
+.OUR{
+    font-family: cursive;
+}
+
+.logo{
+    width: 20vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.search input{
+    outline: 0;
+    border:0;
+    width: 450px;
+    height: 35px;
+    padding: 0 0.5rem;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border: solid 1px rgb(252, 252, 252);
+    border-radius: 10px;
+}
+
+input, select, textarea{
+    color: var(--secondary-color);
+}
+
+
+.container{
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
+    grid-gap:20px;
+    box-sizing: border-box;
+
+}
+
+
+.card{
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 5px rgba(212, 185, 150, .5);
+    transition: .5s;
+    text-align: center;
+    position: relative;
+}
+
+.card:hover{
+    transform: scale(0.9);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+}
+
+
+.card .bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+.card .bottom .title{
+    font-size: 14px;
+    margin-bottom: 12px;
+
+}
+
+.card .bottom .amount{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0.2rem;
+}
+
+.overlay{
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.overlay-inner{
+    background: white;
+    width: 700px;
+    height: 550px;
+    padding: 1.5rem;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 1.3rem;
+    overflow-y:scroll;
+}
+
+.overlay-inner .close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.overlay-inner .inner-box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.overlay-inner .inner-box img{
+    margin-right: 20px;
+    width: 150px;
+    height: 200px;
+}
+
+.overlay-inner .inner-box h3{
+    margin-top: 10px;
+    color: green;
+}
+
+.overlay-inner .inner-box h4{
+    color: blue;
+}
+
+.overlay-inner .inner-box button{
+    outline: none;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #24a0ed;
+    color: rgb(252, 247, 247);
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+}
+
+.overlay-inner .description{
+    margin-top: 2rem;
+    text-align: justify;
+    font-size: 13px;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.pagination button {
+    width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #eee;
+    border-color: #eee;
+}
+
+.pagination button.active {
+    font-weight: 900;
+    border-color: #101010;
+    background: #ffe400;
+    color: #101010;
+}
